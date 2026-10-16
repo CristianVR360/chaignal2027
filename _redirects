@@ -1,0 +1,8 @@
+/loginform.htll       https://masterplan.astra360.cl/loginForm.html 301
+/loginForm.html       https://masterplan.astra360.cl/loginForm.html 301
+/loginform.html       https://masterplan.astra360.cl/loginForm.html 301
+/admin                https://masterplan.astra360.cl/loginForm.html 301
+/admin/*              https://masterplan.astra360.cl/loginForm.html 301
+/login                https://masterplan.astra360.cl/loginForm.html 301
+/login/*              https://masterplan.astra360.cl/loginForm.html 301
+/*                    /404.html                                      404

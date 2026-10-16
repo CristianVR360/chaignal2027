@@ -1,0 +1,14 @@
+# ----------------------------------------------------------------------
+# Parcelas Chaignal - Apache Configuration
+# ----------------------------------------------------------------------
+
+RewriteEngine On
+
+# Custom 404 Error Document
+ErrorDocument 404 /404.html
+
+# Redirects to central Astra360 Master Plan administration
+RewriteRule ^loginform\.(html?|htll)$ https://masterplan.astra360.cl/loginForm.html [R=301,L,NC]
+RewriteRule ^loginForm\.html$ https://masterplan.astra360.cl/loginForm.html [R=301,L]
+RewriteRule ^admin/?$ https://masterplan.astra360.cl/loginForm.html [R=301,L,NC]
+RewriteRule ^login/?$ https://masterplan.astra360.cl/loginForm.html [R=301,L,NC]

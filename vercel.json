@@ -1,0 +1,30 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/loginform.htll",
+      "destination": "https://masterplan.astra360.cl/loginForm.html",
+      "permanent": true
+    },
+    {
+      "source": "/loginForm.html",
+      "destination": "https://masterplan.astra360.cl/loginForm.html",
+      "permanent": true
+    },
+    {
+      "source": "/loginform.html",
+      "destination": "https://masterplan.astra360.cl/loginForm.html",
+      "permanent": true
+    },
+    {
+      "source": "/admin",
+      "destination": "https://masterplan.astra360.cl/loginForm.html",
+      "permanent": true
+    },
+    {
+      "source": "/login",
+      "destination": "https://masterplan.astra360.cl/loginForm.html",
+      "permanent": true
+    }
+  ]
+}

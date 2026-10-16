@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Página no encontrada | Parcelas Chaignal</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #00955f;
+      --color-primary-light: #10b981;
+      --color-primary-glow: rgba(16, 185, 129, 0.35);
+      --color-dark-bg: #0b151e;
+      --color-card-bg: rgba(18, 30, 42, 0.78);
+      --color-card-border: rgba(255, 255, 255, 0.12);
+      --color-text-main: #f8fafc;
+      --color-text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Mulish', 'Poppins', sans-serif;
+      background-color: var(--color-dark-bg);
+      color: var(--color-text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Immersive Background */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      background: 
+        linear-gradient(180deg, rgba(11, 21, 30, 0.82) 0%, rgba(11, 21, 30, 0.72) 40%, rgba(11, 21, 30, 0.94) 100%),
+        radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.15) 0%, transparent 65%),
+        url('img/portfolio/hero1.jpg') center center / cover no-repeat;
+      z-index: 0;
+      filter: saturate(1.1);
+      transform: scale(1.02);
+      animation: gentleZoom 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes gentleZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+
+    /* Ambient Glow Blobs */
+    .glow-blob {
+      position: fixed;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.4;
+      animation: floatBlob 10s ease-in-out infinite alternate;
+    }
+
+    .glow-blob-1 {
+      top: -100px;
+      right: 10%;
+      background: #00955f;
+    }
+
+    .glow-blob-2 {
+      bottom: -150px;
+      left: 5%;
+      background: #0284c7;
+    }
+
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(30px, 40px); }
+    }
+
+    /* Header */
+    header {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo-link:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+    }
+
+    /* Main Container */
+    main {
+      position: relative;
+      z-index: 10;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .card-404 {
+      background: var(--color-card-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--color-card-border);
+      border-radius: 28px;
+      padding: 3.5rem 3rem;
+      max-width: 660px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 
+        0 20px 50px -10px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      animation: cardAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes cardAppear {
+      0% {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Top decorative card highlight */
+    .card-404::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
+    }
+
+    /* Badge */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.1rem;
+      border-radius: 9999px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+    }
+
+    .status-badge i {
+      font-size: 1.05rem;
+      animation: compassSpin 6s ease-in-out infinite;
+    }
+
+    @keyframes compassSpin {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(35deg); }
+    }
+
+    /* Giant 404 Text */
+    .number-404 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(6.5rem, 16vw, 9.5rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 15%, #a7f3d0 60%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      user-select: none;
+      position: relative;
+    }
+
+    /* Headline */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    /* Description */
+    p {
+      color: var(--color-text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      margin-bottom: 2.25rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Action Buttons */
+    .actions-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 540px) {
+      .actions-group {
+        flex-direction: row;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.85rem;
+      border-radius: 9999px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      width: 100%;
+    }
+
+    @media (min-width: 540px) {
+      .btn {
+        width: auto;
+      }
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00955f 0%, #00b050 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 24px var(--color-primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(16, 185, 129, 0.45);
+      background: linear-gradient(135deg, #02a368 0%, #02be57 100%);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+
+    .btn i {
+      font-size: 1.25rem;
+    }
+
+    /* Help & Footer notes */
+    .support-note {
+      margin-top: 2.25rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+    }
+
+    .support-note a {
+      color: #34d399;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s ease;
+    }
+
+    .support-note a:hover {
+      color: #6ee7b7;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 480px) {
+      .card-404 {
+        padding: 2.5rem 1.5rem;
+      }
+      .number-404 {
+        font-size: 6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Art -->
+  <div class="bg-layer" aria-hidden="true"></div>
+  <div class="glow-blob glow-blob-1" aria-hidden="true"></div>
+  <div class="glow-blob glow-blob-2" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo-link" title="Ir al inicio de Parcelas Chaignal">
+      <img src="img/logo/logochaignalblanco.png" alt="Parcelas Chaignal" class="logo-img">
+    </a>
+  </header>
+
+  <!-- Content -->
+  <main>
+    <div class="card-404">
+      <div class="status-badge">
+        <i class='bx bx-compass'></i>
+        <span>Ruta no encontrada</span>
+      </div>
+
+      <div class="number-404">404</div>
+
+      <h1>¿Te perdiste en el bosque?</h1>
+      <p>
+        Parece que el sendero o parcela que buscas no existe o ha cambiado de lugar. 
+        No te preocupes, el camino hacia la tranquilidad del sur está a un solo paso.
+      </p>
+
+      <div class="actions-group">
+        <a href="index.html" class="btn btn-primary" id="btn-back-home">
+          <i class='bx bx-home-alt'></i>
+          <span>Volver al inicio</span>
+        </a>
+        <a href="https://masterplan.astra360.cl/projects/parcelas-chaignal/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class='bx bx-map-alt'></i>
+          <span>Ver Master Plan 360</span>
+        </a>
+      </div>
+
+      <div class="support-note">
+        ¿Tienes dudas o necesitas asistencia? 
+        <a href="https://wa.me/56987631317?text=Hola,%20tuve%20un%20problema%20al%20navegar%20en%20el%20sitio%20de%20Parcelas%20Chaignal." target="_blank" rel="noopener noreferrer">
+          <i class='bx bxl-whatsapp'></i> Contáctanos vía WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Parcelas Chaignal • Malalhue, Región de Los Ríos • Desarrollado por <a href="https://www.astra360.cl" target="_blank" rel="noopener noreferrer">Astra360</a></p>
+  </footer>
+</body>
+</html>
