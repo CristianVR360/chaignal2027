@@ -1,0 +1,21 @@
+{
+  "name": "parcelas-chaignal-website",
+  "version": "2.0.0",
+  "description": "Sitio web oficial de Parcelas Chaignal - Malalhue, Región de Los Ríos",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "parcelas",
+    "chaignal",
+    "malalhue",
+    "region-de-los-rios",
+    "panguipulli",
+    "loteo",
+    "masterplan"
+  ],
+  "author": "Astra360",
+  "license": "UNLICENSED"
+}

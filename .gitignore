@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment / local files (residual protection)
+.env
+.env.*
+
+# Dependencies (if ever run)
+node_modules/
+package-lock.json
+
+# Editor settings
+.vscode/
+.idea/
